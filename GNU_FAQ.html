@@ -1,0 +1,532 @@
+<html>
+	<head>
+	<title>
+	GCC GNU FAQ
+	</title>		 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	
+
+	</head>
+	
+	<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="navbar">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">GCC</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGCC" aria-controls="navbarGCC" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarGCC">
+				<ul class="navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/gccmission.html">Mission</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/releases.html">Releases</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/snapshots.html">Snapshots</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/lists.html">Mailing Lists</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/onlinedocs/gcc/Contributors.html">Contributors</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Documentation</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/install/">Installation</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/install/specific.html">Platforms</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/onlinedocs/">Manual</a></li>
+							<li><a class="dropdown-item" href="#">FAQ</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/wiki">Wiki</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/readings.html">Pointers</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Download</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/mirrors.html">Mirrors</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/install/binaries.html">Binaries</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sources</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/git.html">Git</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/gitwrite.html">...write access</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/rsync.html">Rsync</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Development</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/develop.html">Plan</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/develop.html#timeline">Timeline</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/contribute.html">Contributing</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/contributewhy.html">Why contribute?</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/projects/">Open projects</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/frontends.html">Front ends</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/backends.html">Back ends</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/extensions.html">Extensions</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/testing/">Testing</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/benchmarks/">Benchmarks</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/translation.html">Translations</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Bugs</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/bugs/#known">Known bugs</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/bugs/">How to report</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/bugzilla/">Bug tracker</a></li>
+							<li><a class="dropdown-item" href="https://gcc.gnu.org/bugs/management.html">Management</a></li>
+						</ul>
+					</li>
+				<form role="search">
+					<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+				</form>
+			</div>
+		</div>
+	</nav>
+	
+	
+	<div class="container text-center">
+		<div class="row">
+			<div class="col" "p-2 g-col-6">
+				<img src="ComputerImage.jpg" alt= "Person typing on a comupter">
+			</div>
+			<div class="col" "p-2 g-col-6"> 
+				<h1>Frequently Asked Questions</h1>
+			<div class="pcol" "p-2 g-col-6"> 
+					<p>Find answers to common questions concerning GCC.
+					<br>
+					Please see comp.lang.c FAQ and the C++ FAQ for general information regarding C, C++, and Fortran respectively.
+					</p>
+				</div>
+		</div>
+    </div>
+
+	<div class="container text-center" "p-2 g-col-2">
+		<div class="row">
+			<div class="col">
+				<ul class="Menu">
+					<li><span class="dropdown-item-text">Menu</span></li>
+					<li><a class="dropdown-item" href="#">General Information</a></li>
+					<li><a class="dropdown-item" href="#">Installation</a></li>
+					<li><a class="dropdown-item" href="#">Testuite Problems</a></li>
+					<li><a class="dropdown-item" href="#">Miscellaneous</a></li>
+				</ul>
+			</div>
+			<div class="col" "p-2 g-col-8">
+				<h3>General Information</h3>
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							How do I get a bug fixed or a feature added?
+							</button>
+							</h2>
+					<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							There are lots of ways to get something fixed. The list below may be incomplete, but it covers many of the common cases. These are listed roughly in order of decreasing difficulty for the average GCC user, meaning someone who is not skilled in the internals of GCC, and where difficulty is measured in terms of the time required to fix the bug. No alternative is better than any other; each has its benefits and disadvantages.
+							<br>
+							Fix it yourself. This alternative will probably bring results, if you work hard enough, but will probably take a lot of time, and, depending on the quality of your work and the perceived benefits of your changes, your code may or may not ever make it into an official release of GCC.
+							Report the problem to the GCC bug tracking system and hope that someone will be kind enough to fix it for you. While this is certainly possible, and often happens, there is no guarantee that it will. You should not expect the same response from this method that you would see from a commercial support organization since the people who read GCC bug reports, if they choose to help you, will be volunteering their time.
+							Hire someone to fix it for you. There are various companies and individuals providing support for GCC. This alternative costs money, but is relatively likely to get results.
+						</div>
+					</div>
+					</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Does GCC work on my platform?
+							</button>
+							</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							The host/target specific installation notes for GCC include information about known problems with installing or using GCC on particular platforms. These are included in the sources for a release in INSTALL/specific.html, and the latest version is always available at the GCC web site. There you also find reports around successful builds.
+<!--add link!-->
+						</div>
+					</div>
+					</div>
+					</div>
+	
+		<h3>Installation</h3>
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						How to install multiple versions of GCC
+
+					</button>
+					</h2>
+					<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							It may be desirable to install multiple versions of the compiler on the same system. This can be done by using different prefix paths at configure time and a few symlinks.
+							<br>
+							Basically, configure the two compilers with different --prefix options, then build and install each compiler. Assume you want "gcc" to be the latest compiler and available in /usr/local/bin; also assume that you want "gcc2" to be the older gcc2 compiler and also available in /usr/local/bin.
+							<br>
+							The easiest way to do this is to configure the new GCC with --prefix=/usr/local/gcc and the older gcc2 with --prefix=/usr/local/gcc2. Build and install both compilers. Then make a symlink from /usr/local/bin/gcc to /usr/local/gcc/bin/gcc and from /usr/local/bin/gcc2 to /usr/local/gcc2/bin/gcc. Create similar links for the "g++", "c++" and "g77" compiler drivers.
+							<br>	
+							An alternative to using symlinks is to configure with a --program-transform-name option. This option specifies a sed command to process installed program names with. Using it you can, for instance, have all the new GCC programs installed as "new-gcc" and the like. You will still have to specify different --prefix options for new GCC and old GCC, because it is only the executable program names that are transformed. The difference is that you (as administrator) do not have to set up symlinks, but must specify additional directories in your (as a user) PATH. A complication with --program-transform-name is that the sed command invariably contains characters significant to the shell, and these have to be escaped correctly, also it is not possible to use "^" or "$" in the command. Here is the option to prefix "new-" to the new GCC installed programs:
+							<br>
+							--program-transform-name='s,\\\\(.*\\\\),new-\\\\1,'
+							<br>
+							With the above --prefix option, that will install the new GCC programs into /usr/local/gcc/bin with names prefixed by "new-". You can use --program-transform-name if you have multiple versions of GCC, and wish to be sure about which version you are invoking.
+							<br>
+							If you use --prefix, GCC may have difficulty locating a GNU assembler or linker on your system, GCC can not find GNU as/GNU ld explains how to deal with this.
+							<br>
+							Another option that may be easier is to use the --program-prefix= or --program-suffix= options to configure. So if you're installing GCC 2.95.2 and don't want to disturb the current version of GCC in /usr/local/bin/, you could do
+							<br>
+							configure --program-suffix=-2.95.2 <other configure options>
+							<br>
+							This should result in GCC being installed as /usr/local/bin/gcc-2.95.2 instead of /usr/local/bin/gcc.
+							</div>
+						</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseITwo" aria-expanded="false" aria-controls="collapseITwo">
+						Dynamic linker is unable to find GCC libraries
+
+					</button>
+					</h2>
+					<div id="collapseITwo" class="accordion-collapse collapse" data-bs-parent="#accordionInstall">
+					<div class="accordion-body">
+						This problem manifests itself by programs not finding shared libraries they depend on when the programs are started. (This often shows around libstdc++.)
+						<br>
+						GCC does not specify a runpath so that the dynamic linker can find dynamic libraries at runtime.
+						<br>
+						The short explanation is that if you always pass a -R option to the linker, your programs become dependent on directories which may be NFS mounted, and programs — even those which do not require these directories — may hang unnecessarily when an NFS server goes down. (SunOS effectively always passed a -R option for every -L option; this was a bad idea, and it was removed for Solaris.)
+						<br>
+						However, if you feel you really need such an option to be passed automatically to the linker, you may add it to a GCC specs file. This file can be created using gcc -dumpspecs and passed to GCC using the -specs= option. You may add linker flags such as -R or -rpath, depending on platform and linker, to the *link or *lib specs.
+						<br>
+						Alternately the syntax -Wl,option can be used to ask GCC to transfer the flag option to the linker.
+						<br>
+						Another alternative is to install a wrapper script around gcc, g++ or ld that adds the appropriate directory to the environment variable LD_RUN_PATH or equivalent (again, it's platform-dependent).
+
+					</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIThree" aria-expanded="false" aria-controls="collapseIThree">
+						GCC can not find GNU as/GNU ld
+
+					</button>
+					</h2>
+					<div id="collapseIThree" class="accordion-collapse collapse" data-bs-parent="#accordionInstall">
+					<div class="accordion-body">
+						GCC searches the PATH for an assembler and a linker, but it only does so after searching a directory list hard-coded in the GCC executables. Since, on most platforms, the hard-coded list includes directories in which the system assembler and linker can be found, you may have to take one of the following actions to arrange that GCC uses the GNU versions of those programs.
+						<br>
+						To ensure that GCC finds the GNU assembler (the GNU linker), which are required by some configurations, you should configure these with the same --prefix option as you used for GCC. Then build & install GNU as (GNU ld) and proceed with building GCC.
+						<br>
+						Another alternative is to create links to GNU as and ld in any of the directories printed by the command `gcc -print-search-dirs | grep '^programs:''. The link to `ld' should be named `real-ld' if `ld' already exists. If such links do not exist while you're compiling GCC, you may have to create them in the build directories too, within the gcc directory and in all the gcc/stage* subdirectories.
+						<br>
+						GCC 2.95 allows you to specify the full pathname of the assembler and the linker to use. The configure flags are `--with-as=/path/to/as' and `--with-ld=/path/to/ld'. GCC will try to use these pathnames before looking for `as' or `(real-)ld' in the standard search dirs. If, at configure-time, the specified programs are found to be GNU utilities, `--with-gnu-as' and `--with-gnu-ld' need not be used; these flags will be auto-detected. One drawback of this option is that it won't allow you to override the search path for assembler and linker with command-line options -B/path/ if the specified filenames exist.
+
+
+					</div>
+				</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIFour" aria-expanded="false" aria-controls="collapseIFour">
+						cpp: Usage:... Error
+					</button>
+					</h2>
+					<div id="collapseIFour" class="accordion-collapse collapse" data-bs-parent="#accordionInstall">
+					<div class="accordion-body">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIFour" aria-expanded="false" aria-controls="collapseIFour">
+						If you get an error like this when building GCC (particularly when building __mulsi3), then you likely have a problem with your environment variables.
+						<br>
+							cpp: Usage: /usr/lib/gcc-lib/i586-unknown-linux-gnulibc1/2.7.2.3/cpp
+							[switches] input output
+						<br>
+						First look for an explicit '.' in either LIBRARY_PATH or GCC_EXEC_PREFIX from your environment. If you do not find an explicit '.', look for an empty pathname in those variables. Note that ':' at either the start or end of these variables is an implicit '.' and will cause problems.
+						<br>
+						Also note '::' in these paths will also cause similar problems.
+					</div>
+					</div>
+				</div>
+		</div>
+		
+		<h3>Testuite Problems</h3>
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						How do I pass flags like -fnew-abi to the testsuite?
+						</button>
+						</h2>
+						<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+						If you invoke runtest directly, you can use the --tool_opts option, e.g:
+						<br>
+						runtest --tool_opts "-fnew-abi -fno-honor-std" <other options>
+						<br>
+						Or, if you use make check you can use the make variable RUNTESTFLAGS, e.g:
+						<br>
+						make RUNTESTFLAGS="--tool_opts '-fnew-abi -fno-honor-std'" check-g++
+					</div>
+					</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTPTwo" aria-expanded="false" aria-controls="collapseTPTwo">
+						How can I run the testsuite with multiple options?
+
+							</button>
+						</h2>
+						<div id="collapseTPTwo" class="accordion-collapse collapse" data-bs-parent="#accordionTP">
+						<div class="accordion-body">
+						If you invoke runtest directly, you can use the --target_board option, e.g:
+						<br>
+						runtest --target_board "unix{-fPIC,-fpic,}" <other options>
+						<br>
+						Or, if you use make check you can use the make variable RUNTESTFLAGS, e.g:
+						<br>
+						make RUNTESTFLAGS="--target_board 'unix{-fPIC,-fpic,}'" check-gcc
+						<br>
+						Either of these examples will run the tests three times. Once with -fPIC, once with -fpic, and once with no additional flags.
+						<br>
+						This technique is particularly useful on multilibbed targets.
+						</div>
+						</div>
+				  </div>
+				</div>
+		
+		<h3>Miscellaneous</h3>
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							Friend Templates
+						</button>
+					</h2>
+			<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					In order to make a specialization of a template function a friend of a (possibly template) class, you must explicitly state that the friend function is a template, by appending angle brackets to its name, and this template function must have been declared already. Here's an example:
+					<br>
+					template <typename T> class foo {
+					<br>
+					friend void bar(foo<T>);
+					<br>
+					}
+					<br>
+					The above declaration declares a non-template function named bar, so it must be explicitly defined for each specialization of foo. A template definition of bar won't do, because it is unrelated with the non-template declaration above. So you'd have to end up writing:
+					<br>
+					void bar(foo<int>) { /* ... */ }
+					<br>
+					void bar(foo<void>) { /* ... */ }
+					<br>
+					If you meant bar to be a template function, you should have forward-declared it as follows. Note that, since the template function declaration refers to the template class, the template class must be forward-declared too:
+					<br>
+					template <typename T>
+					<br>
+					class foo;
+					<br>
+					template <typename T>
+					<br>
+					void bar(foo<T>);
+					<br>
+					template <typename T>
+					<br>
+					class foo {
+					<br>
+					friend void bar<>(foo<T>);
+					<br>
+					};
+					<br>
+					template <typename T>
+					<br>
+					void bar(foo<T>) { /* ... */ }
+					<br>
+					In this case, the template argument list could be left empty, because it can be implicitly deduced from the function arguments, but the angle brackets must be present, otherwise the declaration will be taken as a non-template function. Furthermore, in some cases, you may have to explicitly specify the template arguments, to remove ambiguity.
+					<br>
+					An error in the last public comment draft of the ANSI/ISO C++ Standard and the fact that previous releases of GCC would accept such friend declarations as template declarations has led people to believe that the forward declaration was not necessary, but, according to the final version of the Standard, it is.
+					<br>			
+				</div>
+			</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							dynamic_cast, throw, typeid don't work with shared libraries
+						</button>
+					</h2>
+				<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					The new C++ ABI in the GCC 3.0 series uses address comparisons, rather than string compares, to determine type equality. This leads to better performance. Like other objects that have to be present in the final executable, these std::type_info objects have what is called vague linkage because they are not tightly bound to any one particular translation unit (object file). The compiler has to emit them in any translation unit that requires their presence, and then rely on the linking and loading process to make sure that only one of them is active in the final executable. With static linking all of these symbols are resolved at link time, but with dynamic linking, further resolution occurs at load time. You have to ensure that objects within a shared library are resolved against objects in the executable and other shared libraries.
+					<br>
+					For a program which is linked against a shared library, no additional precautions are needed.
+					<br>
+					You cannot create a shared library with the "-Bsymbolic" option, as that prevents the resolution described above.
+					<br>
+					If you use dlopen to explicitly load code from a shared library, you must do several things. First, export global symbols from the executable by linking it with the "-E" flag (you will have to specify this as "-Wl,-E" if you are invoking the linker in the usual manner from the compiler driver, g++). You must also make the external symbols in the loaded library available for subsequent libraries by providing the RTLD_GLOBAL flag to dlopen. The symbol resolution can be immediate or lazy.
+					<br>
+					Template instantiations are another, user visible, case of objects with vague linkage, which needs similar resolution. If you do not take the above precautions, you may discover that a template instantiation with the same argument list, but instantiated in multiple translation units, has several addresses, depending in which translation unit the address is taken. (This is not an exhaustive list of the kind of objects which have vague linkage and are expected to be resolved during linking & loading.)
+					<br>
+					If you are worried about different objects with the same name colliding during the linking or loading process, then you should use namespaces to disambiguate them. Giving distinct objects with global linkage the same name is a violation of the One Definition Rule (ODR) [basic.def.odr].
+					<br>
+					For more details about the way that GCC implements these and other C++ features, please read the C++ ABI specification. Note the std::type_info objects which must be resolved all begin with "_ZTS". Refer to ld's documentation for a description of the "-E" & "-Bsymbolic" flags.
+				</div>
+				</div>
+			</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							Why do I need autoconf, bison, xgettext, automake, etc?
+
+						</button>
+					</h2>
+				<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+						If you're using diffs up dated from one snapshot to the next, or if you're using the SVN repository, you may need several additional programs to build GCC.
+						<br>
+						These include, but are not necessarily limited to autoconf, automake, bison, and xgettext.
+						<br>
+						This is necessary because neither diff nor cvs keep timestamps correct. This causes problems for generated files as "make" may think those generated files are out of date and try to regenerate them.
+						<br>
+						An easy way to work around this problem is to use the gcc_update script in the contrib subdirectory of GCC, which handles this transparently without requiring installation of any additional tools.
+						<br>
+						If you modified some sources or when building from SVN you may also need some additional tools.
+				</div>
+				</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Accordion Item #2
+						</button>
+					</h2>
+				<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+				</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Why can't I build a shared library?
+
+						</button>
+					</h2>
+				<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					When building a shared library you may get an error message from the linker like `assert pure-text failed:' or `DP relative code in file'.
+					<br>
+					This kind of error occurs when you've failed to provide proper flags to gcc when linking the shared library.
+					<br>
+					You can get this error even if all the .o files for the shared library were compiled with the proper PIC option. When building a shared library, gcc will compile additional code to be included in the library. That additional code must also be compiled with the proper PIC option.
+					<br>
+					Adding the proper PIC option (-fpic or -fPIC) to the link line which creates the shared library will fix this problem on targets that support PIC in this manner. For example:
+					<br>
+					gcc -c -fPIC myfile.c
+					<br>
+					gcc -shared -o libmyfile.so -fPIC myfile.o
+
+				</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							When building C++, the linker says my constructors, destructors or virtual tables are undefined, but I defined them
+
+						</button>
+					</h2>
+				<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+				The ISO C++ Standard specifies that all virtual methods of a class that are not pure-virtual must be defined, but does not require any diagnostic for violations of this rule [class.virtual]/8. Based on this assumption, GCC will only emit the implicitly defined constructors, the assignment operator, the destructor and the virtual table of a class in the translation unit that defines its first such non-inline method.
+				<br>
+				Therefore, if you fail to define this particular method, the linker may complain about the lack of definitions for apparently unrelated symbols. Unfortunately, in order to improve this error message, it might be necessary to change the linker, and this can't always be done.
+				<br>
+				The solution is to ensure that all virtual methods that are not pure are defined. Note that a destructor must be defined even if it is declared pure-virtual [class.dtor]/7.
+				</div>
+				</div>
+			</div>
+	</div>
+		
+		
+<!--
+			<div class="accordion" id="accordionMisc">
+					<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMone" aria-expanded="false" aria-controls="collapseMone">
+						Accordion Item #1
+					</button>
+				</h2>
+				<div id="collapseMone" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+				<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+				</div>
+					<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMTwo" aria-expanded="false" aria-controls="collapseMTwo">
+						Accordion Item #2
+					</button>
+					</h2>
+					<div id="collapseMTwo" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+						<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+					</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMThree" aria-expanded="false" aria-controls="collapseMThree">
+						Accordion Item #3
+					</button>
+					</h2>
+					<div id="collapseMThree" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+					<div class="accordion-body">
+					<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMFour" aria-expanded="false" aria-controls="collapseMFour">
+						Accordion Item #4
+					</button>
+					</h2>
+					<div id="collapseMFour" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+					<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+				</div
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMFive" aria-expanded="false" aria-controls="collapseMFive">
+						Accordion Item #5
+					</button>
+					</h2>
+					<div id="collapseMFive" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+					<div class="accordion-body">
+						<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMSix" aria-expanded="false" aria-controls="collapseMSix">
+						Accordion Item #6
+					</button>
+				</h2>
+					<div id="collapseMSix" class="accordion-collapse collapse" data-bs-parent="#accordionMisc">
+					<div class="accordion-body">
+						<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+				</div>
+				</div>
+			</div>
+!-->
+		
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
